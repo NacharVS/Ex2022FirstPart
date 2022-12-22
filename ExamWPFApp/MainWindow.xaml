@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid Height="300"
+              Width="200">
+            <TextBlock HorizontalAlignment="Left" Margin="10,4,0,0" TextWrapping="Wrap" Text="Firs name" VerticalAlignment="Top"/>
+            <TextBox x:Name="FName" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
+            <TextBlock HorizontalAlignment="Left" Margin="10,48,0,0" TextWrapping="Wrap" Text="Last name" VerticalAlignment="Top"/>
+            <TextBox x:Name="LName"  HorizontalAlignment="Left" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top"/>
+            <TextBox x:Name="Login" HorizontalAlignment="Left" Margin="10,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="10,136,0,0" TextWrapping="Wrap" Text="Birth date ()" VerticalAlignment="Top"/>
+            <TextBox x:Name="BirthDate" HorizontalAlignment="Left" Margin="10,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="10,180,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" Width="120"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="10,224,0,0" TextWrapping="Wrap" Text="Repeat password" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="RepeatPasswod" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Registration" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Height="22" Click="Registration_Click"/>
+
+            
+        </Grid>
     </Grid>
 </Window>

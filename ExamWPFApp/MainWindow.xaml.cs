@@ -24,5 +24,28 @@ namespace ExamWPFApp
         {
             InitializeComponent();
         }
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            if (FName.Text != String.Empty && LName.Text != String.Empty && 
+                Password.Password != String.Empty && RepeatPasswod.Password != String.Empty &&
+                BirthDate.Text != String.Empty && Login.Text != String.Empty)
+            {
+                if (RepeatPasswod.Password  == Password.Password)
+                {
+                    try
+                    { 
+                        User user = new User(FName.Text, LName.Text, Login.Text, Password.Password, DateOnly.Parse(BirthDate.Text));
+                        UserMongoDB.AddUnitTodataBase(user);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else MessageBox.Show("Passwords must match");
+            }
+            else MessageBox.Show("All fields must be filled");
+        }
     }
 }

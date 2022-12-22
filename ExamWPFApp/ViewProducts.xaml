@@ -1,0 +1,38 @@
+﻿<Window x:Class="ExamWPFApp.ViewProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamWPFApp"
+        mc:Ignorable="d"
+        Title="ViewProducts" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="Products" 
+                  MouseDoubleClick="ViewProducts_MouseDoubleClick"
+                  Height="150"
+                  VerticalAlignment="Top" Margin="0,40,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="NameProduct" Header="Product" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn x:Name="CostProduct" Header="Cost" DisplayMemberBinding="{Binding Cost}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Margin="10,201,0,0" TextWrapping="Wrap" Text="ShoppingBasket" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="258,201,0,0" TextWrapping="Wrap" Text="Cash account" VerticalAlignment="Top"/>
+        <TextBlock x:Name="CashAccount" HorizontalAlignment="Center" Margin="0,201,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <ListView x:Name="ShoppingBasket" 
+                  Height="150"
+                  VerticalAlignment="Top"
+                  Margin="0, 230,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="Name" Header="Product" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn x:Name="Cost" Header="Cost" DisplayMemberBinding="{Binding Cost}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Pay" HorizontalAlignment="Left" Margin="10,385,0,0" VerticalAlignment="Top" Height="22" Click="Pay_Click" Width="62"/>
+        <Button Content="All Purchase data" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="22" Click="PurchaseData_Click" Width="62"/>
+    </Grid>
+</Window>

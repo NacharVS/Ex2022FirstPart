@@ -35,6 +35,12 @@ namespace ExamWPFApp
                     {
                         MessageBox.Show("Incorrect login or password");
                     }
+                    else 
+                    {
+                        ViewProducts viewProducts = new ViewProducts(user);
+                        viewProducts.Show();
+                        this.Close();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -42,6 +48,13 @@ namespace ExamWPFApp
                 }
             }
             else MessageBox.Show("All fields must be filled");
+        }
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow Registration = new MainWindow();
+            Registration.Show();
+            this.Close();
         }
     }
 }

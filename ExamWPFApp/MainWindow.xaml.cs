@@ -36,7 +36,11 @@ namespace ExamWPFApp
                     try
                     { 
                         User user = new User(FName.Text, LName.Text, Login.Text, Password.Password, DateTime.Parse(BirthDate.Text));
+                        user.CashAccount += 5000;
                         UserMongoDB.AddUserTodataBase(user);
+                        ViewProducts viewProducts = new ViewProducts(user);
+                        viewProducts.Show();
+                        this.Close();
                     }
                     catch (Exception ex)
                     {

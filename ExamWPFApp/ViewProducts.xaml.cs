@@ -81,7 +81,8 @@ namespace ExamWPFApp
 
         private void PurchaseData_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show()
+            var newData = UserMongoDB.FindAllPurchaseData();
+            
         }
     }
 }

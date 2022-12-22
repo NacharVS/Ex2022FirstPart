@@ -13,20 +13,20 @@ namespace ExamWPFApp
         static MongoClient client;
         static IMongoDatabase database;
         static IMongoCollection<User> userCollection;
-        static IMongoCollection<object> purchaseDataCollection;
+        static IMongoCollection<PurchaseData> purchaseDataCollection;
 
         static UserMongoDB()
         {
             client = new MongoClient();
             database = client.GetDatabase(dataBaseName);
             userCollection = database.GetCollection<User>(unitCollectionName);
-            purchaseDataCollection = database.GetCollection<object>(itemCollectionName);
+            purchaseDataCollection = database.GetCollection<PurchaseData>(itemCollectionName);
         }
 
-        public static void AddPurchaseDataTodataBase(String name, List<Product> products, int Cost)
+        public static void AddPurchaseDataTodataBase(string name, List<Product> products, int Cost)
         {
-            DateTime now = DateTime.Now;
-            purchaseDataCollection.InsertOne(new {name, products, Cost, now});
+            PurchaseData purchaseData = new PurchaseData(name, products, Cost);
+            purchaseDataCollection.InsertOne(purchaseData);
         }
 
         public static void AddUserTodataBase(User user)
@@ -37,6 +37,11 @@ namespace ExamWPFApp
         public static List<User> FindAllUsers()
         {
             return userCollection.Find(x => true).ToList();
+        }
+
+        public static List<PurchaseData> FindAllPurchaseData()
+        {
+            return purchaseDataCollection.Find(x => true).ToList();
         }
 
         public static void ReplaceUser(string login, User user)

@@ -16,14 +16,18 @@ using System.Windows.Shapes;
 namespace ExamWPFApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для AutorizationPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AutorizationPage : Page
     {
-        public MainWindow()
+        public AutorizationPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AutorizationPage());
+        }
+
+        private void RegBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RegistrationPage());
         }
     }
 }

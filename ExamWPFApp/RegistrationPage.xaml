@@ -1,0 +1,43 @@
+﻿<Page x:Class="ExamWPFApp.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExamWPFApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrationPage">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFDC6161"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110*"></RowDefinition>
+            <RowDefinition Height="500*"></RowDefinition>
+            <RowDefinition Height="110*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="410*"></ColumnDefinition>
+            <ColumnDefinition Width="410*"></ColumnDefinition>
+            <ColumnDefinition Width="410*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Name"  Grid.Column="1" HorizontalAlignment="Left" Margin="55,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="169" Height="29" Grid.RowSpan="2"/>
+        <Label Grid.Column="1" Content="Name" HorizontalAlignment="Left" Margin="55,29,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Surname" Grid.Column="1" HorizontalAlignment="Left" Margin="55,46,0,0" Grid.Row="1" VerticalAlignment="Top" Width="169" Height="29"/>
+        <Label Grid.Column="1" Content="Surname" HorizontalAlignment="Left" Margin="55,20,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="RegBtn"  Grid.Column="1" Content="Registration" HorizontalAlignment="Left" Margin="106,10,0,0" Grid.Row="2" VerticalAlignment="Top" Click="RegBtn_Click"/>
+        <TextBox x:Name="Birthday"  Grid.Column="1" HorizontalAlignment="Left" Margin="55,104,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="169" Height="29"/>
+        <Label Grid.Column="1" Content="Birthday. Write like 'YYYY.MM.DD'" HorizontalAlignment="Left" Margin="55,78,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="55,164,0,0" Grid.Row="1" VerticalAlignment="Top" Width="169" Height="29"/>
+        <Label Grid.Column="1" Content="Login" HorizontalAlignment="Left" Margin="55,138,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="Password"  Grid.Column="1" HorizontalAlignment="Left" Margin="60,218,0,0" Grid.Row="1"  VerticalAlignment="Top" Width="169" Height="29"/>
+        <Label Grid.Column="1" Content="Password" HorizontalAlignment="Left" Margin="60,192,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="RepPassword" Grid.Column="1" HorizontalAlignment="Left" Margin="60,278,0,0" Grid.Row="1" VerticalAlignment="Top" Width="169" Height="29"/>
+        <Label Grid.Column="1" Content="Repeat Password" HorizontalAlignment="Left" Margin="60,252,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="ExamWPFApp.Shop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamWPFApp"
+        mc:Ignorable="d"
+        Title="Shop" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="ShopTC" Margin="87,-24,0,0" Height="458" VerticalAlignment="Top" HorizontalAlignment="Left" Width="713">
+            <TabItem Header="Products">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="ProductList" MouseDoubleClick="ProductList_MouseDoubleClick">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" HeaderStringFormat="Name" DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="Cost" HeaderStringFormat="Cost" DisplayMemberBinding="{Binding Cost}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Basket" GotFocus="TabItem_GotFocus">
+                <Grid Background="#FFE5E5E5" HorizontalAlignment="Center" Width="707" Height="436" VerticalAlignment="Top">
+                    <ListView x:Name="BasketList" Margin="0,0,0,44">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" HeaderStringFormat="Name" DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="Cost" HeaderStringFormat="Cost" DisplayMemberBinding="{Binding Cost}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="PurchaseBtn" Content="Purchase" HorizontalAlignment="Left" Margin="647,397,0,0" VerticalAlignment="Top" Click="PurchaseBtn_Click"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,397,0,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="ProductSumTB" HorizontalAlignment="Left" Margin="64,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="0"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Background="#FFB7B7B7" HorizontalAlignment="Left" Width="87" Height="434" VerticalAlignment="Center">
+            <Button x:Name="ProductsBtn" Content="Products" HorizontalAlignment="Center" Margin="0,149,0,0" VerticalAlignment="Top" Click="ProductsBtn_Click"/>
+            <Button x:Name="BasketBtn" Content="Basket" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" Click="BasketBtn_Click"/>
+            <Button Content="Button" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top"/>
+            <Button Content="Button" HorizontalAlignment="Center" Margin="0,354,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="BalanceTB" HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button x:Name="AddBtn" Content="Add" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Click="AddBtn_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>

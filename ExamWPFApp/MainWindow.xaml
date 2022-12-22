@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel Background="#FFDADADA" Width="400" Height="349" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" Text="Name" Width="380" Margin="10,10,10,0"/>
+            <TextBox x:Name="NameTB" TextWrapping="Wrap" Width="380" Margin="10,10,10,0"/>
+            <TextBlock TextWrapping="Wrap" Text="Surname" Margin="10,10,10,0"/>
+            <TextBox x:Name="SurnameTB" TextWrapping="Wrap" Width="380" Margin="10,10,10,0"/>
+            <TextBlock TextWrapping="Wrap" Text="Birth date" Margin="10,5,0,0"/>
+            <TextBox x:Name="BirthDateTB" TextWrapping="Wrap" Width="380" Margin="0,5,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="Login" Margin="10,5,0,0"/>
+            <TextBox x:Name="LoginTB" TextWrapping="Wrap" Width="380" Margin="0,5,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="Password" Margin="10,10,10,0"/>
+            <PasswordBox x:Name="PasswordTB" Width="380" Margin="0,5,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="Password confirmaion" Margin="10,5,0,0"/>
+            <PasswordBox x:Name="PasswrodConfirmationTB" Width="380" Margin="0,5,0,0"/>
+            <Button x:Name="RegistrationBtn" Content="Registration" Width="380" Margin="10,10,10,0" Click="RegistrationBtn_Click"/>
+            <Button x:Name="AuthorizationBtn" Content="Authorization" Width="380" Click="AuthorizationBtn_Click" Margin="0,5,0,0"/>
+        </StackPanel>
 
     </Grid>
 </Window>

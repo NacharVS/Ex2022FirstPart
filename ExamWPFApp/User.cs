@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Options;
 
 namespace ExamWPFApp
 {
     internal class User
     {
-        public User(string firstName, string lastName, string login, string password, DateOnly birthDate)
+        public User(string firstName, string lastName, string login, string password, DateTime birthDate)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -17,21 +16,14 @@ namespace ExamWPFApp
             BirthDate = birthDate;
         }
 
+        [BsonId]
+        [BsonIgnoreIfDefault]
+        ObjectId id;
         public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public string Login { get; set; }
 		public string Password { get; set; }
-		public DateOnly BirthDate { get; set; }
+		public DateTime BirthDate { get; set; }
 
 	}
 }
-/*
- * 1. Регистрация:	
-	Поля:
-	а) Имя
-	б) Фамилия
-	в) Дата рождения
-	г) Логин
-	д) Пароль
-	е) Повтор пароля
-*/

@@ -27,8 +27,8 @@
             <TextBlock HorizontalAlignment="Left" Margin="10,224,0,0" TextWrapping="Wrap" Text="Repeat password" VerticalAlignment="Top"/>
             <PasswordBox x:Name="RepeatPasswod" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="120"/>
             <Button Content="Registration" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Height="22" Click="Registration_Click"/>
+            <Button Content="Authorization" HorizontalAlignment="Left" Margin="100,268,0,0" VerticalAlignment="Top" Height="22" Click="Authorization_Click"/>
 
-            
         </Grid>
     </Grid>
 </Window>

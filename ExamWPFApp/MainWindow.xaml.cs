@@ -35,8 +35,8 @@ namespace ExamWPFApp
                 {
                     try
                     { 
-                        User user = new User(FName.Text, LName.Text, Login.Text, Password.Password, DateOnly.Parse(BirthDate.Text));
-                        UserMongoDB.AddUnitTodataBase(user);
+                        User user = new User(FName.Text, LName.Text, Login.Text, Password.Password, DateTime.Parse(BirthDate.Text));
+                        UserMongoDB.AddUserTodataBase(user);
                     }
                     catch (Exception ex)
                     {
@@ -46,6 +46,13 @@ namespace ExamWPFApp
                 else MessageBox.Show("Passwords must match");
             }
             else MessageBox.Show("All fields must be filled");
+        }
+
+        private void Authorization_Click(object sender, RoutedEventArgs e)
+        {
+            Authorization authorization = new Authorization();
+            authorization.Show();
+            this.Close();
         }
     }
 }

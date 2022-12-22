@@ -22,23 +22,23 @@ namespace ExamWPFApp
             //itemCollection = database.GetCollection<Item>(itemCollectionName);
         }
 
-        public static void AddUnitTodataBase(User user)
+        public static void AddUserTodataBase(User user)
         {
             userCollection.InsertOne(user);
         }
 
-        public static List<User> FindAllUnits()
+        public static List<User> FindAllUsers()
         {
             return userCollection.Find(x => true).ToList();
         }
 
 
-        public static void ReplaceUnit(string login, User user)
+        public static void ReplaceUser(string login, User user)
         {
             userCollection.ReplaceOne(x => x.Login == login, user);
         }
 
-        public static User FindUnit(string login)
+        public static User FindUser(string login)
         {
             return userCollection.Find(x => x.Login == login).FirstOrDefault();
         }

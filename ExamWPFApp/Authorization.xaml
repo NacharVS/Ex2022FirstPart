@@ -1,0 +1,20 @@
+﻿<Window x:Class="ExamWPFApp.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamWPFApp"
+        mc:Ignorable="d"
+        Title="Authorization" Height="450" Width="800">
+    <Grid>
+        <Grid Height="150"
+              Width="200">
+            <TextBlock HorizontalAlignment="Left" Margin="5,10,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top"/>
+            <TextBox x:Name="Login" HorizontalAlignment="Left" Margin="0,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="5,54,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Authorization" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Height="22" Click="Authorization_Click"/>
+        </Grid>
+    </Grid>
+</Window>
